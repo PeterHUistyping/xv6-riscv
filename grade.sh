@@ -1,0 +1,2 @@
+make grade
+rm *.out
