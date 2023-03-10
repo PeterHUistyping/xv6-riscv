@@ -16,5 +16,5 @@ https://github.com/PeterHUistyping/Operating_System
 git remote add origin https://github.com/PeterHUistyping/xv6-riscv.git
 git remote set-url origin https://github.com/PeterHUistyping/xv6-riscv.git
 git remote -v
-git push -u -f origin Labs-2020
+git push -u -f origin
 ```
