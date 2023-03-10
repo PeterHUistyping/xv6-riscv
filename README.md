@@ -18,3 +18,9 @@ git remote set-url origin https://github.com/PeterHUistyping/xv6-riscv.git
 git remote -v
 git push -u -f origin
 ```
+## README.md
+```
+mkdir .github
+cd .github
+ln -s README.md README.md
+```
