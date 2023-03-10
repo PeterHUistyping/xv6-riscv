@@ -22,5 +22,5 @@ git push -u -f origin
 ```
 mkdir .github
 cd .github
-ln -s README.md README.md
+ln -s ../README.md README.md
 ```
