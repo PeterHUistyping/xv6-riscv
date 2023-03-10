@@ -1,2 +1,1 @@
 make grade
-rm *.out
