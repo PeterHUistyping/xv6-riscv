@@ -1,1 +1,2 @@
-make grade
+# make grade
+make GRADEFLAGS=sleep grade
