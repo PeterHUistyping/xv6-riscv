@@ -1,4 +1,5 @@
 # make grade
 make GRADEFLAGS=sleep grade
 make GRADEFLAGS=pingpong grade
-sudo bash ./clean.sh
+make GRADEFLAGS=primes grade
+sudo bash ./rm.sh
