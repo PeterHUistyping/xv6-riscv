@@ -11,6 +11,9 @@
         "new": "c",
         "sstream": "c",
         "stop_token": "c",
-        "streambuf": "c"
+        "streambuf": "c",
+        "fs.h": "c",
+        "queue": "c",
+        "random": "c"
     }
 }
