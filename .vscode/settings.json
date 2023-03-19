@@ -2,6 +2,15 @@
     "files.associations": {
         "types.h": "c",
         "stat.h": "c",
-        "user.h": "c"
+        "user.h": "c",
+        "ostream": "c",
+        "*.tcc": "c",
+        "exception": "c",
+        "memory_resource": "c",
+        "iosfwd": "c",
+        "new": "c",
+        "sstream": "c",
+        "stop_token": "c",
+        "streambuf": "c"
     }
 }
