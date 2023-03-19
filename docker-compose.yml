@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  zookeeper:
+    image: amd64/ubuntu:20.04
+    hostname: p
+    container_name: p
+    platform: linux/amd64
+    ports:
+      - "2181:2181"
