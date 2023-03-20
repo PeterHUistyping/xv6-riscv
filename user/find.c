@@ -23,6 +23,7 @@ fmtname(char *path)
 }
 
 void find(char *path, char *word ){
+    printf("path %s\n",path);
     char buf[512], *p;
     int fd;
     struct dirent de;
@@ -42,7 +43,10 @@ void find(char *path, char *word ){
     switch(st.type){
     case T_DEVICE:
     case T_FILE:
-        printf("%s %d %d %l\n", fmtname(path), st.type, st.ino, st.size);
+        if(strcmp(fmtname(path),word)==0){
+            printf("%s %s %d %l\n", fmtname(path), path, st.ino, st.size);
+        }
+        
     break;
 
     case T_DIR:
@@ -53,6 +57,8 @@ void find(char *path, char *word ){
     strcpy(buf, path);
     p = buf+strlen(buf);
     *p++ = '/';
+    // char new_path[512];
+    // strcpy(new_path,buf);    
     while(read(fd, &de, sizeof(de)) == sizeof(de)){
         if(de.inum == 0)
         continue;
@@ -62,7 +68,21 @@ void find(char *path, char *word ){
             printf("ls: cannot stat %s\n", buf);
             continue;
         }
-        printf("%s %d %d %d\n", fmtname(buf), st.type, st.ino, st.size);
+        if (strcmp(de.name, ".") == 0 || strcmp(de.name, "..") == 0){ //infinity loop
+            // printf("skip %s\n");
+            continue;
+        }
+        if(st.type==T_FILE){
+            // printf("%s\n",p);
+            if(strcmp(p ,word)==0){
+                printf("%s\n",buf);
+            }
+        }
+        else if (st.type==T_DIR){
+            printf("T_DIR%s\n",buf);
+            find(buf,word);
+        }
+
     }
     break;
     }

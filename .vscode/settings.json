@@ -14,6 +14,10 @@
         "streambuf": "c",
         "fs.h": "c",
         "queue": "c",
-        "random": "c"
+        "random": "c",
+        "cstring": "c",
+        "cwchar": "c",
+        "string": "c",
+        "string_view": "c"
     }
 }
