@@ -23,7 +23,7 @@ fmtname(char *path)
 }
 
 void find(char *path, char *word ){
-    printf("path %s\n",path);
+    // printf("path %s\n",path);
     char buf[512], *p;
     int fd;
     struct dirent de;
@@ -79,7 +79,7 @@ void find(char *path, char *word ){
             }
         }
         else if (st.type==T_DIR){
-            printf("T_DIR%s\n",buf);
+            // printf("T_DIR%s\n",buf);
             find(buf,word);
         }
 
